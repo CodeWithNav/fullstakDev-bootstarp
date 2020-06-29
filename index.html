@@ -63,9 +63,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal"
-              ><span class="fa fa-sign-in"></span> Login</a
-            >
+            <a id="clickLogin"><span class="fa fa-sign-in"></span> Login</a>
           </span>
         </div>
       </div>
@@ -123,7 +121,7 @@
                   Cancle
                 </button>
                 <button class="btn btn-primary btn-sm ml-1" type="submit">
-                  Login
+                  Sign in
                 </button>
               </div>
             </form>
@@ -286,11 +284,7 @@
             <img src="img/logo.png" class="img-fluid" />
           </div>
           <div class="col-12 col-sm-3 align-self-center">
-            <a
-              class="btn btn-block nav-link btn-warning"
-              data-toggle="modal"
-              data-target="#reserveModal"
-            >
+            <a class="btn btn-block nav-link btn-warning" id="openReserve">
               Reserve Table
             </a>
           </div>
@@ -551,6 +545,13 @@
             $("#carouselButton").children("span").removeClass("fa-play");
             $("#carouselButton").children("span").addClass("fa-pause");
           }
+        });
+        $("#clickLogin").click(function () {
+          $("#loginModal").modal("toggle");
+        });
+
+        $("#openReserve").click(function () {
+          $("#reserveModal").modal("toggle");
         });
       });
     </script>
